@@ -16,8 +16,8 @@ inline void Fraction::crack() {
     }
     if (abs(_chisl) >= abs(_znam)) {
         long long x = _chisl / _znam;
-        _chisl = abs(_chisl) % abs(_znam);
-        _znam = abs(_znam);
+        this->_chisl = abs(_chisl) % abs(_znam);
+        this->_znam = abs(_znam);
         std::cout << x << " " << _chisl << "/" << _znam << std::endl;
     }
     else

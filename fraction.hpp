@@ -8,14 +8,12 @@ private:
     inline void znak();
 
 public:
-    
-    Fraction() : _chisl(0), _znam(0) {}
 
-    Fraction(long long chisl = 0, long long znam = 1)
-        : _chisl(chisl), _znam(znam) {}
+   Fraction(long long chisl = 0, long long znam = 1)
+       : _chisl{ chisl }, _znam{ znam } {}
 
 
-    Fraction(const std::string& str) {
+     Fraction(const std::string& str) {
         std::size_t  pos = str.find("/");
         if (pos == std::string::npos) {
             this->_chisl = stoi(str);
@@ -35,10 +33,10 @@ public:
         znak();
     }
     
-    long long getChisl() {
+    long long getChisl() const {
         return this->_chisl;
     }
-    long long getZnam() {
+    long long getZnam() const {
         return this->_znam;
     }
 

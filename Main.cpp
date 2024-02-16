@@ -21,29 +21,28 @@ int main()
    
    
     Fraction resalt = 0;
-    std::cout << "Умножение: \n";
-    resalt.multiplication(a.getChisl(), a.getZnam(), b.getChisl(), b.getZnam());
-    std::cout << "Деление: \n";
-    resalt.division(a.getChisl(), a.getZnam(), b.getChisl(), b.getZnam());
-    std::cout << "Сложение: \n";
-    resalt.addition (a.getChisl(), a.getZnam(), b.getChisl(), b.getZnam());
-    std::cout << "Вычитание: \n";
-    resalt.subtraction (a.getChisl(), a.getZnam(), b.getChisl(), b.getZnam());
-    
-    std::cout << "Действительное число: " << resalt.D_chislo(a.getChisl(), a.getZnam());
 
-
-  try
+    try
     {
-     
-    
+        std::cout << "Умножение: \n";
+        resalt.multiplication(a.getChisl(), a.getZnam(), b.getChisl(), b.getZnam());
+        std::cout << "Деление: \n";
+        resalt.division(a.getChisl(), a.getZnam(), b.getChisl(), b.getZnam());
+        std::cout << "Сложение: \n";
+        resalt.addition(a.getChisl(), a.getZnam(), b.getChisl(), b.getZnam());
+        std::cout << "Вычитание: \n";
+        resalt.subtraction(a.getChisl(), a.getZnam(), b.getChisl(), b.getZnam());
+
+        std::cout << "Действительное число: " << resalt.D_chislo(a.getChisl(), a.getZnam());
+
     }
     catch (std::exception ex)
     {
         std::cout << ex.what() << '\n';
     }
-    
 
+
+   
 
     return 0;
 }
